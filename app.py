@@ -5,22 +5,22 @@ pipeline = joblib.load('pipeline.pkl')
 st.title('Malnutrition Prediction')
 median_year = st.number_input("MEDIAN YEAR", min_value=1900, max_value=2100, value=2022)
     
-sample_size = st.number_input(f'SAMPLE SIZE (Min: {float(min_values["SAMPLE SIZE"])}, Max: {float(max_values["SAMPLE SIZE"])})', 
+sample_size = st.number_input(f'SAMPLE SIZE (Min: 0, Max: 15)', 
                                   min_value=0.0, max_value=15.0, value=0.0)
     
-severe_wasting = st.number_input(f'SEVERE WASTING (Min: {float(min_values["SEVERE WASTING"])}, Max: {float(max_values["SEVERE WASTING"])})', 
+severe_wasting = st.number_input(f'SEVERE WASTING (Min: 0, Max: 5)', 
                                      min_value=0.0, max_value=5.0, value=0.0)
     
-wasting = st.number_input(f'WASTING (Min: {float(min_values["WASTING"])}, Max: {float(max_values["WASTING"])})', 
+wasting = st.number_input(f'WASTING (Min: 0, Max: 5)', 
                               min_value=0.0, max_value=5.0, value=0.0)
     
-overweight = st.number_input(f'OVERWEIGHT (Min: {float(min_values["OVERWEIGHT"])}, Max: {float(max_values["OVERWEIGHT"])})', 
+overweight = st.number_input(f'OVERWEIGHT (Min: 0, Max: 5)', 
                                  min_value=0.0, max_value=5.0, value=0.0)
     
-stunting = st.number_input(f'STUNTING (Min: {float(min_values["STUNTING"])}, Max: {float(max_values["STUNTING"])})', 
+stunting = st.number_input(f'STUNTING (Min: 0, Max: 5)', 
                                min_value=0.0, max_value=5.0, value=0.0)
     
-underweight = st.number_input(f'UNDERWEIGHT (Min: {float(min_values["UNDERWEIGHT"])}, Max: {float(max_values["UNDERWEIGHT"])})', 
+underweight = st.number_input(f'UNDERWEIGHT (Min: 0, Max: 5)', 
                                   min_value=0.0, max_value=5.0, value=0.0)
 country = st.selectbox("COUNTRY", options=["Afghanistan", "Bangladesh", "Cambodia"])
 input_data = {
