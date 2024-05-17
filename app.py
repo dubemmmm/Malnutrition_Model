@@ -22,7 +22,7 @@ stunting = st.number_input(f'STUNTING (Min: 0, Max: 5)',
     
 underweight = st.number_input(f'UNDERWEIGHT (Min: 0, Max: 5)', 
                                   min_value=0.0, max_value=5.0, value=0.0)
-country = st.selectbox("COUNTRY", options=["Afghanistan", "Bangladesh", "Cambodia"])
+country = st.text_input("COUNTRY").strip()
 input_data = {
         'MEDIAN YEAR': median_year,
     'SAMPLE SIZE': sample_size,
