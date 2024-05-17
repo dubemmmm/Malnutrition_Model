@@ -3,8 +3,7 @@ import joblib
 import pandas as pd
 pipeline = joblib.load('pipeline.pkl')
 st.title('Malnutrition Prediction')
-median_year = st.number_input(f'MEDIAN YEAR (Min: {int(min_values["MEDIAN YEAR"])}, Max: {int(max_values["MEDIAN YEAR"])})', 
-                                  min_value=int(min_values['MEDIAN YEAR']), max_value=int(max_values['MEDIAN YEAR']), value=int(min_values['MEDIAN YEAR']))
+median_year = st.number_input("MEDIAN YEAR", min_value=1900, max_value=2100, value=2022)
     
 sample_size = st.number_input(f'SAMPLE SIZE (Min: {float(min_values["SAMPLE SIZE"])}, Max: {float(max_values["SAMPLE SIZE"])})', 
                                   min_value=0.0, max_value=15.0, value=0.0)
