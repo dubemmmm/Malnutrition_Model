@@ -53,5 +53,5 @@ if st.button("Predict"):
 # Add a footer
 st.markdown("""
     ---
-    *Developed by [Your Name](https://your-link.com)*
+    *Developed by TABLEAU TEAM*
 """)
