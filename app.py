@@ -20,7 +20,7 @@ input_data = {
         'UNDERWEIGHT': [underweight],
         'country': [country]
     }
-input_df = pd.DataFrame(input_data)
+#input_df = pd.DataFrame(input_data)
 if st.button("Predict"):
   predictions = pipeline.predict(input_df)
   st.write(f"The prediction is: {'Malnourished' if predictions[0] == 1 else 'Not Malnourished'}")
