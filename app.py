@@ -2,6 +2,8 @@ import streamlit as st
 import joblib
 import pandas as pd
 pipeline = joblib.load('pipeline.pkl')
+if pipeline:
+        st.write('pipeline model imported')
 st.title('Malnutrition Prediction')
 median_year = st.number_input("MEDIAN YEAR", min_value=1900, max_value=2100, value=2022)
 sample_size = st.slider('SAMPLE SIZE', min_value=0, max_value=15, value=0)
