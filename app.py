@@ -16,14 +16,14 @@ stunting = st.slider('STUNTING', min_value=0, max_value=5)
 underweight = st.slider('UNDERWEIGHT', min_value=0, max_value=5)
 country = st.selectbox("COUNTRY", options=["Afghanistan", "Bangladesh", "Cambodia"])
 input_data = {
-        'MEDIAN YEAR': 2022,
-    'SAMPLE SIZE': 10.382946,
-    'SEVERE WASTING': 0.789643,
-    'WASTING': 1.533202,
-    'OVERWEIGHT': 1.704915,
-    'STUNTING': 3.820002,
-    'UNDERWEIGHT': 2.963118,
-    'COUNTRY': ['Afghanistan']
+        'MEDIAN YEAR': median_year,
+    'SAMPLE SIZE': sample_size,
+    'SEVERE WASTING': severe_wasting,
+    'WASTING': wasting,
+    'OVERWEIGHT': overweight,
+    'STUNTING': stunting,
+    'UNDERWEIGHT': underweight,
+    'COUNTRY': [country]
     }
 input_df = pd.DataFrame(input_data)
 if st.button("Predict"):
